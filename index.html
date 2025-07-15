@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.menu-item {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chat-box {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.input-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+#text-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-button:hover {
+    background-color: #0056b3;
+}
+
+.mic-button {
+    background-color: #ffc107;
+}
+
+.mic-button:hover {
+    background-color: #e0a800;
+}
+
+.upload-button {
+    background-color: #28a745;
+}
+
+.upload-button:hover {
+    background-color: #218838;
+}
+
+</style></head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <!-- Menu items can be added here -->
+            <button class="menu-item">Menu Item 1</button>
+            <button class="menu-item">Menu Item 2</button>
+            <button class="menu-item">Menu Item 3</button>
+        </div>
+        <div class="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-bar">
+            <input type="text" id="text-input" placeholder="Type your message here...">
+            <button class="input-button mic-button"><i class="fas fa-microphone"></i></button>
+            <button class="input-button send-button">Send</button>
+            <input type="file" id="file-input" style="display: none;">
+            <label for="file-input" class="input-button upload-button"><i class="fas fa-upload"></i></label>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
